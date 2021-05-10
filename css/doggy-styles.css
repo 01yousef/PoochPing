@@ -1,0 +1,43 @@
+/* general styling */
+
+body {
+  background-color: #d6d2c4;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  margin: 7rem auto;
+}
+
+h1 {
+  color: #f8f4e1;
+  font-family: "Amatic SC", cursive;
+  font-size: 4.5rem;
+  font-weight: bold;
+}
+
+/* header + navbar */
+
+.header {
+  background-color: #968c83;
+  box-shadow: 0 2px 4px 0 grey;
+  color: #d6d2c4;
+  font-family: "Amatic SC", cursive;
+  font-size: 1.5rem;
+  font-weight: bolder;
+  height: auto;
+  margin-bottom: auto;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+}
+
+.navbar-brand {
+  color: #d6d2c4;
+  font-family: "Amatic SC", cursive;
+  font-size: 2rem;
+  font-weight: bolder;
+  padding: 10px;
+}
