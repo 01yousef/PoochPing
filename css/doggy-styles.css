@@ -154,3 +154,62 @@ p {
   padding: 30px;
   vertical-align: middle;
 }
+
+.img-stack {
+  display: grid;
+  position: relative;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.img-stack-bottom {
+  grid-column: 2 / -1;
+  grid-row: 1;
+}
+
+.map-icon {
+  object-position: center;
+  width: 100%;
+}
+
+.img-stack-top {
+  grid-column: 9 / span 8;
+  grid-row: 1;
+  padding-top: 70%;
+  z-index: 1;
+}
+
+.pink-marker {
+  max-width: 65%;
+  min-width: 60%;
+}
+
+/** marker animation  */
+
+img.pink-marker {
+  animation: wobble alternate 4s infinite;
+  animation-fill-mode: both;
+}
+
+@keyframes wobble {
+  0% {
+    transform: translateX(0%);
+  }
+  15% {
+    transform: translateX(-10%) rotate(-5deg);
+  }
+  30% {
+    transform: translateX(20%) rotate(5deg);
+  }
+  45% {
+    transform: translateX(-15%) rotate(-5deg);
+  }
+  60% {
+    transform: translateX(10%) rotate(5deg);
+  }
+  75% {
+    transform: translateX(-5%) rotate(-5deg);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
