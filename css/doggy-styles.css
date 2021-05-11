@@ -95,8 +95,8 @@ p {
 
 .introduction-container {
   margin: auto;
-  padding-top: 25px;
-  padding-bottom: 150px;
+  padding-top: 5%;
+  padding-bottom: 15%;
   text-align: center;
   width: 90%;
 }
@@ -116,7 +116,7 @@ p {
   margin: auto;
   padding-top: 15px;
   padding-bottom: 45px;
-  text-align: left;
+  text-align: justify;
 }
 
 /* TODO: correct container breakpoints + how img divs interact with text divs */
@@ -124,18 +124,22 @@ p {
   margin: auto;
   padding-top: 170px;
   padding-bottom: 50px;
-  text-align: left;
+  text-align: justify;
 }
 
 .about-container {
   margin: auto;
   padding-top: 170px;
   padding-bottom: 50px;
-  text-align: right;
+  /* text-align: right; */
+}
+.dog-house {
+  vertical-align: middle;
 }
 
 .crate {
-  padding-left: 30px;
+  direction: rtl;
+  text-align: justify;
 }
 
 .dog-ball {
@@ -146,10 +150,17 @@ p {
 .product-container {
   margin: auto;
   padding-bottom: 45px;
-  text-align: left;
+  text-align: justify;
 }
 
 .status-container {
+  margin: auto;
+  padding-bottom: 45px;
+  padding-top: 70px;
+  text-align: justify;
+}
+
+.conclusion-container {
   margin: auto;
   padding-bottom: 45px;
   padding-top: 70px;
@@ -193,7 +204,7 @@ p {
   min-width: 60%;
 }
 
-/** marker img animation  */
+/* marker img animation  */
 
 img.pink-marker {
   animation: wobble alternate 4s infinite;
@@ -225,17 +236,20 @@ img.pink-marker {
 }
 
 .doggy-img {
-  height: 100%;
   padding-right: 30px;
+  width: 100%;
 }
 
-/** dog toy img animation  */
+/* dog toy img animation  */
 
 img.dog-toy {
   animation: bounce alternate 4s infinite;
   animation-fill-mode: both;
+  position: relative;
+  left: 80%;
+  top: -25%;
   max-width: 10%;
-  min-width: 8%;
+  min-width: 5%;
 }
 
 @keyframes bounce {
@@ -262,7 +276,7 @@ img.dog-toy {
   width: 100%;
 }
 
-/** warning img animation  */
+/* warning img animation  */
 
 img.warning-icon {
   animation: shake 3s;
@@ -314,6 +328,24 @@ img.warning-icon {
   margin: 0;
   padding-top: 10px;
   text-align: center;
+}
+
+/** Links **/
+
+a:link {
+  color: #fc8621;
+}
+
+a:hover {
+  color: #ed0cef;
+}
+
+a:active {
+  color: #8105d8;
+}
+
+a:visited {
+  color: #00adb5;
 }
 
 /** extra but unncessary touches  */
