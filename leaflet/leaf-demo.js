@@ -60,3 +60,72 @@ var greenCollar = L.icon({
   iconAnchor: [9, 21],
   popupAnchor: [0, -14],
 });
+
+// *App Mockup Example
+
+const originLat = 52.493891;
+const originLng = 13.446395;
+/*create array:*/
+
+var icons = new Array();
+let proxi;
+
+const mockApp = function () {
+  let tempIcon;
+
+  for (var i = 0; i < markers.length; ++i) {
+    if (markers[i].icon === "user") {
+      tempIcon = user;
+    } else if (markers[i].icon === "pinkCollar") {
+      tempIcon = pinkCollar;
+    } else if (markers[i].icon === "orangeCollar") {
+      tempIcon = orangeCollar;
+    } else if (markers[i].icon === "purpleCollar") {
+      tempIcon = purpleCollar;
+    } else if (markers[i].icon === "blueCollar") {
+      tempIcon = blueCollar;
+    } else if (markers[i].icon === "greenCollar") {
+      tempIcon = greenCollar;
+    } else {
+      console.log("i dont exist");
+    }
+
+    if (markers[i].ranPos === true) {
+      markers[i].lat = originLat + (Math.random() * 3.5 - 2) / 1000;
+      markers[i].lng = originLng + (Math.random() * 3.5 - 2) / 1000;
+      if (tempIcon === pinkCollar) {
+        proxi = L.circle([markers[i].lat, markers[i].lng], {
+          color: "#ed0cef",
+          fillColor: "#eca3f5",
+          fillOpacity: 0.5,
+          radius: 100,
+        });
+        map.addLayer(proxi);
+      }
+    }
+
+    var ranMarker = new L.marker([markers[i].lat, markers[i].lng], {
+      icon: tempIcon,
+    });
+    icons.push(ranMarker);
+    map.addLayer(icons[i]);
+  }
+};
+
+/* Going through these marker-items again removing them*/
+function iconsDlt() {
+  for (i = 0; i < icons.length; i++) {
+    map.removeLayer(icons[i]);
+    map.removeLayer(proxi);
+  }
+  icons = [];
+}
+
+function runApp() {
+  iconsDlt();
+  setTimeout(function () {
+    mockApp();
+  }, 100);
+}
+
+mockApp();

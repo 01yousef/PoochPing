@@ -95,7 +95,7 @@ p {
 
 .introduction-container {
   margin: auto;
-  padding-top: 5%;
+  padding-top: 3%;
   padding-bottom: 15%;
   text-align: center;
   width: 90%;
@@ -306,6 +306,23 @@ img.warning-icon {
 }
 
 /** demo map */
+
+.mock-app-button {
+  padding: 20px;
+}
+
+.button {
+  background-color: transparent;
+  border: 0;
+  color: #766161;
+  font-family: "Amatic SC", cursive;
+  font-size: 3rem;
+}
+
+img.button-biscuit {
+  max-height: 4rem;
+  max-width: 4rem;
+}
 
 .map-container {
   align-content: center;
