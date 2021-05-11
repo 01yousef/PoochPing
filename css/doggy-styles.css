@@ -1,10 +1,11 @@
-/* general styling */
+/** general styling */
 
 body {
   background-color: #d6d2c4;
   font-family: "Open Sans", sans-serif;
   font-size: 1rem;
   margin: 7rem auto;
+  width: 70%;
 }
 
 h1 {
@@ -14,7 +15,39 @@ h1 {
   font-weight: bold;
 }
 
-/* header + navbar */
+h2 {
+  color: #766161;
+  font-family: "Amatic SC", cursive;
+  font-size: 2.5rem;
+  font-weight: bolder;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+h3 {
+  color: #f8f4e1;
+  font-family: "Amatic SC", cursive;
+  font-size: 2rem;
+  /* font-weight: lighter; */
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+h5 {
+  font-family: "Amatic SC", cursive;
+  font-size: 2rem;
+  font-weight: lighter;
+}
+
+p {
+  color: #766161;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  line-height: 2;
+  margin: 0;
+}
+
+/** header + navbar */
 
 .header {
   background-color: #968c83;
@@ -40,4 +73,84 @@ h1 {
   font-size: 2rem;
   font-weight: bolder;
   padding: 10px;
+}
+
+/** footer  */
+
+.footer {
+  background-color: #968c83;
+  box-shadow: 0px -2px 5px grey;
+  font-family: "Amatic SC", cursive;
+  left: 0;
+  height: 2.5rem;
+  margin: auto;
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+  z-index: 9999;
+}
+
+/** containers + divs */
+
+.introduction-container {
+  margin: auto;
+  padding-top: 50px;
+  padding-bottom: 200px;
+  text-align: center;
+  width: 50%;
+}
+
+.introduction {
+  margin: auto;
+  text-align: center;
+}
+
+.intro {
+  color: #766161;
+  padding-bottom: 40px;
+  text-shadow: 4px 4px 6px #968c83;
+}
+
+.problem-container {
+  margin: auto;
+  padding-top: 15px;
+  padding-bottom: 45px;
+  text-align: left;
+}
+
+.solution-container {
+  margin: auto;
+  padding-top: 170px;
+  padding-bottom: 50px;
+  text-align: left;
+}
+
+.about-container {
+  margin: auto;
+  padding-top: 170px;
+  padding-bottom: 50px;
+  text-align: right;
+}
+
+.product-container {
+  margin: auto;
+  padding-bottom: 45px;
+  text-align: left;
+}
+
+.status-container {
+  margin: auto;
+  padding-bottom: 45px;
+  padding-top: 70px;
+  text-align: center;
+}
+
+/** images */
+
+.intro-dog {
+  align-items: center;
+  max-width: 150px;
+  padding: 30px;
+  vertical-align: middle;
 }
