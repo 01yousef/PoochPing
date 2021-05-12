@@ -1,4 +1,4 @@
-//* markers of various users
+//*  ////////////////////  markers of various users ////////////////////
 
 var markers = [
   {

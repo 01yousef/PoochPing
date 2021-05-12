@@ -1,4 +1,4 @@
-//* basemap
+//* ///////////// basemap /////////////
 
 var map = L.map("map", {
   center: [52.493891, 13.446395],
@@ -11,13 +11,9 @@ L.tileLayer("	http://c.tile.stamen.com/watercolor/{z}/{x}/{y}.jpg", {
     '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
 }).addTo(map);
 
-//* dog collars = markers
-
 var myURL = jQuery('script[src$="leaf-demo.js"]')
   .attr("src")
   .replace("leaf-demo.js", "");
-
-console.log(myURL);
 
 var user = L.icon({
   iconUrl: myURL + "../Images/user-icon.png",
@@ -61,7 +57,7 @@ var greenCollar = L.icon({
   popupAnchor: [0, -14],
 });
 
-// *App Mockup Example
+//* /////////////  App Mockup Example /////////////
 
 const originLat = 52.493891;
 const originLng = 13.446395;
@@ -121,11 +117,51 @@ function iconsDlt() {
   icons = [];
 }
 
+//* ///////////// audio /////////////
+
+var audio = new Audio("Sounds/bark.mp3");
+
+function play() {
+  audio.play();
+}
+
+//* /////////////  Basic demo /////////////
+
 function runApp() {
   iconsDlt();
   setTimeout(function () {
     mockApp();
   }, 100);
+  play();
+  setTimeout(function () {
+    alertify.warning("Careful! Another dog nearby.");
+  }, 90);
 }
 
 mockApp();
+
+// TODO: Create example code in website for live location
+
+// Livelocation
+// function onLocationFound(e) {
+//   var radius = e.accuracy;
+
+//   L.marker(e.latlng).addTo(map)
+//       .bindPopup("You are within " + radius + " meters from this point").openPopup();
+
+//   L.circle(e.latlng, radius).addTo(map);
+// }
+
+// map.on('locationfound', onLocationFound);
+
+// locationnotfound
+// function onLocationError(e) {
+//   alert(e.message);
+// }
+
+// map.on('locationerror', onLocationError);
+
+// TODO: Create proximity alert for pink collar radius
+
+//! Proximity Event used, Deapreciated
+// geo-proximity v2.3.1

@@ -91,6 +91,13 @@ p {
   z-index: 9999;
 }
 
+.footer-img {
+  max-height: 3rem;
+  position: fixed;
+  bottom: 2.43rem;
+  right: 10px;
+}
+
 /** containers + divs */
 
 .introduction-container {
@@ -363,6 +370,20 @@ a:active {
 
 a:visited {
   color: #00adb5;
+}
+
+/*** Alerts ***/
+
+.alertify-notifier.ajs-bottom {
+  bottom: 75px;
+}
+
+.alertify-notifier .ajs-message.ajs-warning {
+  background: #eca3f5;
+  border-color: #ed0cef;
+  color: #766161;
+  font-family: "Amatic SC", cursive;
+  font-size: 2rem;
 }
 
 /** extra but unncessary touches  */
