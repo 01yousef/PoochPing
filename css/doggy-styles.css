@@ -340,6 +340,7 @@ img.button-biscuit {
 .mapdiv {
   height: 440px;
   margin: auto;
+  min-width: 350px;
   text-align: center;
   width: 100%;
 }

@@ -72,7 +72,7 @@ icons.orangeCollar["coords"] = [52.492829, 13.447287];
 icons.blueCollar["coords"] = [52.494875, 13.442967];
 icons.greenCollar["coords"] = [52.493886, 13.44918];
 
-//*Markers
+//* Markers
 
 icons.user["marker"] = L.marker(icons.user["coords"], {
   icon: icons["user"]["icon"],
@@ -108,7 +108,13 @@ setInterval(function () {
     icons[key]["marker"].setLatLng(icons[key]["coords"]).update();
     // console.log(marker.getLatLng().lat);
     // console.log(marker.getLatLng().lng);
-    console.log(key);
+    // let proxi = L.circle(icons.pinkCollar["coords"], {     //! Work with Geofence to create boundary for alert
+    //   color: "#ed0cef",
+    //   fillColor: "#eca3f5",
+    //   fillOpacity: 0.5,
+    //   radius: 50,
+    // }).addTo(map);
+    // console.log(key);
   });
 }, 200);
 
@@ -117,15 +123,27 @@ let keys = Object.keys(icons);
 
 // TODO: Create proximity alert for pink collar radius
 
-//! Proximity Event used, Deapreciated?
-// geo-proximity v2.3.1
+// ? Use of Geofencing for proximity alert?
 
-//? ////// Or Geofencing? //////
+var marker = new L.marker([52.491891, 13.446395], {
+  draggable: true,
+  autoPan: true,
+}).addTo(map);
 
-// https://developer.android.com/training/location/geofencing#java
-// https://stackoverflow.com/questions/57384822/leaflet-detect-when-marker-goes-into-and-out-of-a-circle
-// https://medium.com/@nnwabuokei/creating-editing-geo-fences-using-openstreetmap-with-the-leaflet-js-library-in-angular-5-project-44f0abbe2643
-// https://en.proft.me/2017/06/6/geographical-boundaries-geofencing-android/
+var circle = L.circle([52.493891, 13.446395], {
+  color: "none",
+  fillColor: "none",
+  fillOpacity: 0.5,
+  radius: 50.0,
+}).addTo(map);
+
+marker.on("drag", function (e) {
+  var d = map.distance(e.latlng, circle.getLatLng());
+  var isInside = d < circle.getRadius();
+  circle.setStyle({
+    fillColor: isInside ? "#e84545" : "",
+  });
+});
 
 //* ///////////// audio /////////////
 
