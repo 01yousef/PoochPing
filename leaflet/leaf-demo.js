@@ -1,4 +1,4 @@
-//* ///////////// basemap /////////////
+///* ///////////// basemap /////////////
 
 var map = L.map("map", {
   center: [52.493891, 13.446395],
@@ -11,134 +11,148 @@ L.tileLayer("	http://c.tile.stamen.com/watercolor/{z}/{x}/{y}.jpg", {
     '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
 }).addTo(map);
 
-var myURL = jQuery('script[src$="leaf-demo.js"]')
-  .attr("src")
-  .replace("leaf-demo.js", "");
+//* The Collars
 
-var user = L.icon({
-  iconUrl: myURL + "../Images/user-icon.png",
-  iconSize: [30, 30],
-  iconAnchor: [9, 21],
-  popupAnchor: [0, -14],
-});
-
-var pinkCollar = L.icon({
-  iconUrl: myURL + "../Images/pinkmarker-mapicon.png",
-  iconSize: [22, 35],
-  iconAnchor: [9, 21],
-  popupAnchor: [0, -14],
-});
-
-var orangeCollar = L.icon({
-  iconUrl: myURL + "../Images/orangemarker-mapicon.png",
-  iconSize: [22, 35],
-  iconAnchor: [9, 21],
-  popupAnchor: [0, -14],
-});
-
-var purpleCollar = L.icon({
-  iconUrl: myURL + "../Images/purplemarker-mapicon.png",
-  iconSize: [22, 35],
-  iconAnchor: [9, 21],
-  popupAnchor: [0, -14],
-});
-
-var blueCollar = L.icon({
-  iconUrl: myURL + "../Images/bluemarker-mapicon.png",
-  iconSize: [22, 35],
-  iconAnchor: [9, 21],
-  popupAnchor: [0, -14],
-});
-
-var greenCollar = L.icon({
-  iconUrl: myURL + "../Images/greenmarker-mapicon.png",
-  iconSize: [22, 35],
-  iconAnchor: [9, 21],
-  popupAnchor: [0, -14],
-});
-
-//* /////////////  App Mockup Example /////////////
-
-const originLat = 52.493891;
-const originLng = 13.446395;
-/*create array:*/
-
-var icons = new Array();
-let proxi;
-
-const mockApp = function () {
-  let tempIcon;
-
-  for (var i = 0; i < markers.length; ++i) {
-    if (markers[i].icon === "user") {
-      tempIcon = user;
-    } else if (markers[i].icon === "pinkCollar") {
-      tempIcon = pinkCollar;
-    } else if (markers[i].icon === "orangeCollar") {
-      tempIcon = orangeCollar;
-    } else if (markers[i].icon === "purpleCollar") {
-      tempIcon = purpleCollar;
-    } else if (markers[i].icon === "blueCollar") {
-      tempIcon = blueCollar;
-    } else if (markers[i].icon === "greenCollar") {
-      tempIcon = greenCollar;
-    } else {
-      console.log("i dont exist");
-    }
-
-    if (markers[i].ranPos === true) {
-      markers[i].lat = originLat + (Math.random() * 3.5 - 2) / 1000;
-      markers[i].lng = originLng + (Math.random() * 3.5 - 2) / 1000;
-      if (tempIcon === pinkCollar) {
-        proxi = L.circle([markers[i].lat, markers[i].lng], {
-          color: "#ed0cef",
-          fillColor: "#eca3f5",
-          fillOpacity: 0.5,
-          radius: 100,
-        });
-        map.addLayer(proxi);
-      }
-    }
-
-    var ranMarker = new L.marker([markers[i].lat, markers[i].lng], {
-      icon: tempIcon,
-    });
-    icons.push(ranMarker);
-    map.addLayer(icons[i]);
-  }
+let icons = {
+  user: {},
+  pinkCollar: {},
+  purpleCollar: {},
+  orangeCollar: {},
+  blueCollar: {},
+  greenCollar: {},
 };
 
-/* Going through these marker-items again removing them*/
-function iconsDlt() {
-  for (i = 0; i < icons.length; i++) {
-    map.removeLayer(icons[i]);
-    map.removeLayer(proxi);
-  }
-  icons = [];
-}
+//* Assigned Icons
+
+icons["user"]["icon"] = L.icon({
+  iconUrl: "./images/user-icon.png",
+  iconSize: [30, 30],
+  iconAnchor: [9, 21],
+});
+
+icons["pinkCollar"]["icon"] = L.icon({
+  iconUrl: "./images/pinkmarker-mapicon.png",
+  iconSize: [22, 35],
+  iconAnchor: [9, 21],
+});
+
+icons["purpleCollar"]["icon"] = L.icon({
+  iconUrl: "./images/purplemarker-mapicon.png",
+  iconSize: [22, 35],
+  iconAnchor: [9, 21],
+});
+
+icons["orangeCollar"]["icon"] = L.icon({
+  iconUrl: "./images/orangemarker-mapicon.png",
+  iconSize: [22, 35],
+  iconAnchor: [9, 21],
+});
+
+icons["blueCollar"]["icon"] = L.icon({
+  iconUrl: "./images/bluemarker-mapicon.png",
+  iconSize: [22, 35],
+  iconAnchor: [9, 21],
+});
+
+icons["greenCollar"]["icon"] = L.icon({
+  iconUrl: "./images/greenmarker-mapicon.png",
+  iconSize: [22, 35],
+  iconAnchor: [9, 21],
+});
+
+//* Co-ords
+// Code University co-ords
+// var lat = 52.493891;
+// var lng = 13.446395;
+
+icons.user["coords"] = [52.493891, 13.446395];
+icons.pinkCollar["coords"] = [52.495886, 13.44846];
+icons.purpleCollar["coords"] = [52.491835, 13.442956];
+icons.orangeCollar["coords"] = [52.492829, 13.447287];
+icons.blueCollar["coords"] = [52.494875, 13.442967];
+icons.greenCollar["coords"] = [52.493886, 13.44918];
+
+//*Markers
+
+icons.user["marker"] = L.marker(icons.user["coords"], {
+  icon: icons["user"]["icon"],
+}).addTo(map);
+
+icons.pinkCollar["marker"] = L.marker(icons.user["coords"], {
+  icon: icons["pinkCollar"]["icon"],
+}).addTo(map);
+
+icons.purpleCollar["marker"] = L.marker(icons.user["coords"], {
+  icon: icons["purpleCollar"]["icon"],
+}).addTo(map);
+
+icons.orangeCollar["marker"] = L.marker(icons.user["coords"], {
+  icon: icons["orangeCollar"]["icon"],
+}).addTo(map);
+
+icons.blueCollar["marker"] = L.marker(icons.user["coords"], {
+  icon: icons["blueCollar"]["icon"],
+}).addTo(map);
+
+icons.greenCollar["marker"] = L.marker(icons.user["coords"], {
+  icon: icons["greenCollar"]["icon"],
+}).addTo(map);
+
+setInterval(function () {
+  let keys = Object.keys(icons);
+  keys.forEach(function (key) {
+    icons[key]["coords"][0] =
+      icons[key]["coords"][0] + (Math.random() * 0.5 - 0.25) * 0.0004;
+    icons[key]["coords"][1] =
+      icons[key]["coords"][1] + (Math.random() * 0.5 - 0.25) * 0.0004;
+    icons[key]["marker"].setLatLng(icons[key]["coords"]).update();
+    // console.log(marker.getLatLng().lat);
+    // console.log(marker.getLatLng().lng);
+    console.log(key);
+  });
+}, 200);
+
+let keys = Object.keys(icons);
+// console.log(keys);
+
+// TODO: Create proximity alert for pink collar radius
+
+//! Proximity Event used, Deapreciated?
+// geo-proximity v2.3.1
+
+//? ////// Or Geofencing? //////
+
+// https://developer.android.com/training/location/geofencing#java
+// https://stackoverflow.com/questions/57384822/leaflet-detect-when-marker-goes-into-and-out-of-a-circle
+// https://medium.com/@nnwabuokei/creating-editing-geo-fences-using-openstreetmap-with-the-leaflet-js-library-in-angular-5-project-44f0abbe2643
+// https://en.proft.me/2017/06/6/geographical-boundaries-geofencing-android/
 
 //* ///////////// audio /////////////
 
-var audio = new Audio("Sounds/bark.mp3");
+var audio = new Audio("sounds/bark.mp3");
 
 function play() {
   audio.play();
 }
 
-//* /////////////  Basic demo /////////////
-
-function runApp() {
-  iconsDlt();
-  setTimeout(function () {
-    mockApp();
-  }, 100);
-  play();
+function bark() {
   setTimeout(function () {
     alertify.warning("Careful! Another dog nearby.");
   }, 90);
+  play();
 }
+//* /////////////  Basic demo /////////////
 
-mockApp();
+// function runApp() {
+//   iconsDlt();
+//   setTimeout(function () {
+//     mockApp();
+//   }, 100);
+//   play();
+//   setTimeout(function () {
+//     alertify.warning("Careful! Another dog nearby.");
+//   }, 90);
+// }
 
 // TODO: Create example code in website for live location
 
@@ -160,8 +174,3 @@ mockApp();
 // }
 
 // map.on('locationerror', onLocationError);
-
-// TODO: Create proximity alert for pink collar radius
-
-//! Proximity Event used, Deapreciated
-// geo-proximity v2.3.1

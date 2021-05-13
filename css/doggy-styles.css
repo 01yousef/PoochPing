@@ -254,7 +254,6 @@ img.dog-toy {
   animation-fill-mode: both;
   position: relative;
   left: 80%;
-  top: -25%;
   max-width: 10%;
   min-width: 5%;
 }
