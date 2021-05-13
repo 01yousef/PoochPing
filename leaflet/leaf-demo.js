@@ -78,23 +78,23 @@ icons.user["marker"] = L.marker(icons.user["coords"], {
   icon: icons["user"]["icon"],
 }).addTo(map);
 
-icons.pinkCollar["marker"] = L.marker(icons.user["coords"], {
+icons.pinkCollar["marker"] = L.marker(icons.pinkCollar["coords"], {
   icon: icons["pinkCollar"]["icon"],
 }).addTo(map);
 
-icons.purpleCollar["marker"] = L.marker(icons.user["coords"], {
+icons.purpleCollar["marker"] = L.marker(icons.purpleCollar["coords"], {
   icon: icons["purpleCollar"]["icon"],
 }).addTo(map);
 
-icons.orangeCollar["marker"] = L.marker(icons.user["coords"], {
+icons.orangeCollar["marker"] = L.marker(icons.orangeCollar["coords"], {
   icon: icons["orangeCollar"]["icon"],
 }).addTo(map);
 
-icons.blueCollar["marker"] = L.marker(icons.user["coords"], {
+icons.blueCollar["marker"] = L.marker(icons.blueCollar["coords"], {
   icon: icons["blueCollar"]["icon"],
 }).addTo(map);
 
-icons.greenCollar["marker"] = L.marker(icons.user["coords"], {
+icons.greenCollar["marker"] = L.marker(icons.greenCollar["coords"], {
   icon: icons["greenCollar"]["icon"],
 }).addTo(map);
 
