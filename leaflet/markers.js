@@ -1,5 +1,7 @@
 // //*  ////////////////////  markers of various users ////////////////////
 
+//? Rethink how users will have profiles + access to their location /// APIs & Databases
+
 // var markers = [
 //   {
 //     dogName: "Code", //! User example is a fixed location of your campus, app will use live location - will not be fixed

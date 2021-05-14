@@ -20,6 +20,7 @@ let icons = {
   orangeCollar: {},
   blueCollar: {},
   greenCollar: {},
+  collarAlert: {},
 };
 
 //* Assigned Icons
@@ -71,11 +72,26 @@ icons.purpleCollar["coords"] = [52.491835, 13.442956];
 icons.orangeCollar["coords"] = [52.492829, 13.447287];
 icons.blueCollar["coords"] = [52.494875, 13.442967];
 icons.greenCollar["coords"] = [52.493886, 13.44918];
+icons.collarAlert["coords"] = icons.pinkCollar["coords"];
+
+icons["collarAlert"]["icon"] = function () {
+  if (alertcircle) {
+  } else
+    return L.circle(icons.collarAlert["coords"], {
+      color: "#bdd2b6",
+      fillColor: "none",
+      fillOpacity: 0.5,
+      radius: 75.0,
+      weight: 1,
+    });
+};
 
 //* Markers
 
 icons.user["marker"] = L.marker(icons.user["coords"], {
   icon: icons["user"]["icon"],
+  draggable: true,
+  autoPan: true,
 }).addTo(map);
 
 icons.pinkCollar["marker"] = L.marker(icons.pinkCollar["coords"], {
@@ -98,54 +114,9 @@ icons.greenCollar["marker"] = L.marker(icons.greenCollar["coords"], {
   icon: icons["greenCollar"]["icon"],
 }).addTo(map);
 
-setInterval(function () {
-  let keys = Object.keys(icons);
-  keys.forEach(function (key) {
-    icons[key]["coords"][0] =
-      icons[key]["coords"][0] + (Math.random() * 0.5 - 0.25) * 0.0004;
-    icons[key]["coords"][1] =
-      icons[key]["coords"][1] + (Math.random() * 0.5 - 0.25) * 0.0004;
-    icons[key]["marker"].setLatLng(icons[key]["coords"]).update();
-    // console.log(marker.getLatLng().lat);
-    // console.log(marker.getLatLng().lng);
-    // let proxi = L.circle(icons.pinkCollar["coords"], {     //! Work with Geofence to create boundary for alert
-    //   color: "#ed0cef",
-    //   fillColor: "#eca3f5",
-    //   fillOpacity: 0.5,
-    //   radius: 50,
-    // }).addTo(map);
-    // console.log(key);
-  });
-}, 200);
+//* ///////////// The Mockup App ///////////
 
-let keys = Object.keys(icons);
-// console.log(keys);
-
-// TODO: Create proximity alert for pink collar radius
-
-// ? Use of Geofencing for proximity alert?
-
-var marker = new L.marker([52.491891, 13.446395], {
-  draggable: true,
-  autoPan: true,
-}).addTo(map);
-
-var circle = L.circle([52.493891, 13.446395], {
-  color: "none",
-  fillColor: "none",
-  fillOpacity: 0.5,
-  radius: 50.0,
-}).addTo(map);
-
-marker.on("drag", function (e) {
-  var d = map.distance(e.latlng, circle.getLatLng());
-  var isInside = d < circle.getRadius();
-  circle.setStyle({
-    fillColor: isInside ? "#e84545" : "",
-  });
-});
-
-//* ///////////// audio /////////////
+// audio
 
 var audio = new Audio("sounds/bark.mp3");
 
@@ -153,24 +124,59 @@ function play() {
   audio.play();
 }
 
-function bark() {
-  setTimeout(function () {
-    alertify.warning("Careful! Another dog nearby.");
-  }, 90);
-  play();
-}
-//* /////////////  Basic demo /////////////
+var alertcircle = icons["collarAlert"]["icon"]();
+alertcircle.addTo(map);
+// icons["collarAlert"]["icon"].addTo(map);
 
-// function runApp() {
-//   iconsDlt();
-//   setTimeout(function () {
-//     mockApp();
-//   }, 100);
-//   play();
-//   setTimeout(function () {
-//     alertify.warning("Careful! Another dog nearby.");
-//   }, 90);
-// }
+var canBark = true;
+
+setInterval(function () {
+  let keys = Object.keys(icons);
+
+  keys.forEach(function (key) {
+    if (key !== "collarAlert" && key !== "user") {
+      // icons["collarAlert"]["icon"];
+      icons[key]["coords"][0] =
+        icons[key]["coords"][0] + (Math.random() * 0.5 - 0.25) * 0.0009;
+      icons[key]["coords"][1] =
+        icons[key]["coords"][1] + (Math.random() * 0.5 - 0.25) * 0.0009;
+      icons[key]["marker"].setLatLng(icons[key]["coords"]).update();
+    }
+
+    // console.log(marker.getLatLng().lat);
+    // console.log(marker.getLatLng().lng);
+    // console.log(key);
+  });
+
+  alertcircle.setLatLng(icons["pinkCollar"]["coords"]); //Function for later
+  var isInside = false;
+  keys.forEach(function (key) {
+    if (key !== "pinkCollar" && key !== "collarAlert") {
+      var d = map.distance(
+        icons[key]["marker"].getLatLng(),
+        alertcircle.getLatLng()
+      );
+      if (d < alertcircle.getRadius()) {
+        isInside = true;
+      }
+      alertcircle.setStyle({
+        fillColor: isInside ? "#ce1212" : "",
+      });
+
+      if (isInside && canBark) {
+        alertify.warning("Careful! Another dog nearby.");
+        play();
+
+        setTimeout(() => {
+          canBark = true;
+        }, 5000);
+        canBark = false;
+      }
+    }
+  });
+}, 1200);
+
+let keys = Object.keys(icons);
 
 // TODO: Create example code in website for live location
 
