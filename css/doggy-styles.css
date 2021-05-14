@@ -311,6 +311,108 @@ img.warning-icon {
   }
 }
 
+/*** Collar Card Colors & Center***/
+
+.collar-card-colors {
+  margin: auto;
+  padding-bottom: 45px;
+  width: 60%;
+}
+
+.col-zen {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*** Cards ***/
+
+.dog-card-holder {
+  padding-top: 30px;
+}
+
+.pink {
+  border-color: #ed0cef;
+}
+
+.orange {
+  border-color: #fc8621;
+  text-align: right;
+}
+
+.purple {
+  border-color: #8105d8;
+  text-align: center;
+}
+
+.blue {
+  border-color: #00adb5;
+  text-align: right;
+}
+
+.green {
+  border-color: #81b214;
+}
+
+.user {
+  border-color: #91684a;
+  text-align: center;
+}
+
+.card {
+  background-color: #faf3e0;
+  border-width: 2px;
+  height: 19rem;
+  width: 17rem;
+}
+
+.user-collar {
+  position: absolute;
+  left: 100px;
+  top: -50px;
+  overflow: visible;
+  width: 4rem;
+}
+
+.pink-collar {
+  position: absolute;
+  left: 200px;
+  top: -70px;
+  overflow: visible;
+  width: 4rem;
+}
+
+.purple-collar {
+  position: absolute;
+  left: 20px;
+  bottom: -15px;
+  overflow: visible;
+  width: 4rem;
+}
+
+.orange-collar {
+  position: absolute;
+  left: -25px;
+  top: 5px;
+  overflow: visible;
+  width: 4rem;
+}
+
+.blue-collar {
+  position: absolute;
+  left: -25px;
+  bottom: 30px;
+  overflow: visible;
+  width: 4rem;
+}
+
+.green-collar {
+  position: absolute;
+  right: -25px;
+  bottom: -25px;
+  overflow: visible;
+  width: 4rem;
+}
+
 /** demo map */
 
 .mock-app-button {
@@ -337,12 +439,15 @@ img.button-biscuit {
   width: 90%;
 }
 
+img.map-frame {
+  width: 350px;
+}
+
 .mapdiv {
   height: 440px;
   margin: auto;
-  min-width: 350px;
   text-align: center;
-  width: 100%;
+  width: 300px;
 }
 
 .map-credit {
