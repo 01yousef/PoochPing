@@ -316,7 +316,7 @@ img.warning-icon {
 .collar-card-colors {
   margin: auto;
   padding-bottom: 45px;
-  width: 60%;
+  width: 80%;
 }
 
 .col-zen {
@@ -415,10 +415,6 @@ img.warning-icon {
 
 /** demo map */
 
-.mock-app-button {
-  padding: 20px;
-}
-
 .button {
   background-color: transparent;
   border: 0;
@@ -439,15 +435,29 @@ img.button-biscuit {
   width: 90%;
 }
 
+.demo {
+  height: 20rem;
+  position: relative;
+  margin: auto;
+  width: fit-content;
+}
+
 img.map-frame {
-  width: 350px;
+  height: 570px;
+  position: absolute;
+  left: -8.7rem;
+  z-index: -1;
 }
 
 .mapdiv {
-  height: 440px;
+  height: 383px;
   margin: auto;
   text-align: center;
-  width: 300px;
+  position: absolute;
+  left: -5.8rem;
+  top: 78px;
+  width: 227px;
+  z-index: 1;
 }
 
 .map-credit {
@@ -455,7 +465,7 @@ img.map-frame {
   font-family: "Amatic SC", cursive;
   font-size: 1.5rem;
   margin: 0;
-  padding-top: 10px;
+  padding-top: 210px;
   text-align: center;
 }
 
