@@ -2,8 +2,8 @@
 
 var map = L.map("map", {
   center: [52.493891, 13.446395],
-  minZoom: 16,
-  zoom: 14,
+  minZoom: 14,
+  zoom: 16,
 });
 
 L.tileLayer("	http://c.tile.stamen.com/watercolor/{z}/{x}/{y}.jpg", {
@@ -67,11 +67,11 @@ icons["greenCollar"]["icon"] = L.icon({
 // var lng = 13.446395;
 
 icons.user["coords"] = [52.493891, 13.446395];
-icons.pinkCollar["coords"] = [52.495886, 13.44846];
-icons.purpleCollar["coords"] = [52.491835, 13.442956];
-icons.orangeCollar["coords"] = [52.492829, 13.447287];
-icons.blueCollar["coords"] = [52.494875, 13.442967];
-icons.greenCollar["coords"] = [52.493886, 13.44918];
+icons.pinkCollar["coords"] = [52.495891, 13.446395];
+icons.purpleCollar["coords"] = [52.492891, 13.445395];
+icons.orangeCollar["coords"] = [52.491891, 13.446395];
+icons.blueCollar["coords"] = [52.494891, 13.444395];
+icons.greenCollar["coords"] = [52.492891, 13.447395];
 icons.collarAlert["coords"] = icons.pinkCollar["coords"];
 
 icons["collarAlert"]["icon"] = function () {
