@@ -179,10 +179,6 @@ setInterval(function () {
 
 let keys = Object.keys(icons);
 
-// TODO: Set onscroll to prevent random bark before reaching the demo section
-
-// TODO: Create example code in website for live location
-
 // Livelocation
 // function onLocationFound(e) {
 //   var radius = e.accuracy;

@@ -164,18 +164,24 @@ p {
 
 .status-container {
   margin: auto;
-  padding-bottom: 75px;
+  padding-bottom: 50px;
   padding-top: 115px;
   text-align: justify;
 }
 
 .collars-container {
-  height: 35rem;
+  height: 26rem;
   margin: auto;
-  padding-top: 50px;
+  padding-top: 56px;
   padding-bottom: 50px;
   overflow: visible;
   width: 90%;
+}
+
+.code {
+  margin: auto;
+  padding: 40px;
+  width: %;
 }
 
 .conclusion-container {
@@ -326,6 +332,30 @@ img.warning-icon {
   }
 }
 
+img.user-profile-pic {
+  position: absolute;
+  top: 2px;
+  left: -10px;
+  overflow: visible;
+  width: 4rem;
+}
+
+img.paw-rest {
+  height: 3.7rem;
+  position: absolute;
+  bottom: -2px;
+  right: 110px;
+  overflow: visible;
+}
+
+img.user-dog {
+  position: absolute;
+  bottom: -18px;
+  right: -15px;
+  overflow: visible;
+  width: 10rem;
+}
+
 img.pink-profile-pic {
   position: absolute;
   bottom: -10px;
@@ -342,8 +372,8 @@ img.purple-profile-pic {
 
 img.orange-profile-pic {
   position: absolute;
+  bottom: -10px;
   left: -20px;
-  top: 0;
   overflow: visible;
 }
 
@@ -373,6 +403,7 @@ img.green-profile-pic {
 .collar-card-colors {
   margin: auto;
   padding-bottom: 45px;
+  padding-top: 45px;
   width: 80%;
 }
 
