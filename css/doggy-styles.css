@@ -169,6 +169,15 @@ p {
   text-align: justify;
 }
 
+.collars-container {
+  height: 35rem;
+  margin: auto;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  overflow: visible;
+  width: 90%;
+}
+
 .conclusion-container {
   margin: auto;
   padding-bottom: 45px;
@@ -317,14 +326,46 @@ img.warning-icon {
   }
 }
 
-.profile-img {
-  margin: auto;
-  padding: 20px;
-  text-align: center;
+img.pink-profile-pic {
+  position: absolute;
+  bottom: -10px;
+  right: -10px;
+  overflow: visible;
 }
 
-img.profile-img {
-  height: 10rem;
+img.purple-profile-pic {
+  position: absolute;
+  bottom: -10px;
+  left: -10px;
+  overflow: visible;
+}
+
+img.orange-profile-pic {
+  position: absolute;
+  left: -20px;
+  top: 0;
+  overflow: visible;
+}
+
+img.blue-profile-pic {
+  position: absolute;
+  right: -20px;
+  bottom: -10px;
+  overflow: visible;
+}
+
+img.green-profile-pic {
+  position: absolute;
+  bottom: -10px;
+  right: -10px;
+  overflow: visible;
+}
+
+/*** Carousel ***/
+.collar-card {
+  height: 20rem;
+  margin: auto;
+  width: 80%;
 }
 
 /*** Collar Card Colors & Center***/
@@ -362,7 +403,7 @@ img.profile-img {
 
 .blue {
   border-color: #00adb5;
-  text-align: right;
+  text-align: left;
 }
 
 .green {
@@ -374,7 +415,7 @@ img.profile-img {
   text-align: center;
 }
 
-.card {
+.card-collar {
   background-color: #faf3e0;
   border-width: 2px;
   height: 19rem;
