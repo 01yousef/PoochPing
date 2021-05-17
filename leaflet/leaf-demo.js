@@ -78,7 +78,7 @@ icons["collarAlert"]["icon"] = function () {
   if (alertcircle) {
   } else
     return L.circle(icons.collarAlert["coords"], {
-      color: "#bdd2b6",
+      color: "none",
       fillColor: "none",
       fillOpacity: 0.5,
       radius: 75.0,
@@ -126,7 +126,6 @@ function play() {
 
 var alertcircle = icons["collarAlert"]["icon"]();
 alertcircle.addTo(map);
-// icons["collarAlert"]["icon"].addTo(map);
 
 var canBark = true;
 
@@ -177,6 +176,8 @@ setInterval(function () {
 }, 1200);
 
 let keys = Object.keys(icons);
+
+// TODO: Set onscroll to prevent random bark before reaching the demo section
 
 // TODO: Create example code in website for live location
 

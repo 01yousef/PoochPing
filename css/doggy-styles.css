@@ -102,10 +102,9 @@ p {
 
 .introduction-container {
   margin: auto;
-  padding-top: 3%;
-  padding-bottom: 15%;
+  padding-bottom: 10%;
   text-align: center;
-  width: 90%;
+  width: 95%;
 }
 
 .introduction {
@@ -121,9 +120,10 @@ p {
 
 .problem-container {
   margin: auto;
-  padding-top: 15px;
   padding-bottom: 45px;
   text-align: justify;
+  margin-top: -200px;
+  padding-top: 190px;
 }
 
 /* TODO: correct container breakpoints + how img divs interact with text divs */
@@ -136,7 +136,7 @@ p {
 
 .about-container {
   margin: auto;
-  padding-top: 170px;
+  padding-top: 160px;
   padding-bottom: 50px;
   /* text-align: right; */
 }
@@ -156,21 +156,23 @@ p {
 
 .product-container {
   margin: auto;
-  padding-bottom: 45px;
+  padding-bottom: 25px;
+  padding-top: 150px;
   text-align: justify;
+  margin-top: -150px;
 }
 
 .status-container {
   margin: auto;
-  padding-bottom: 45px;
-  padding-top: 70px;
+  padding-bottom: 75px;
+  padding-top: 115px;
   text-align: justify;
 }
 
 .conclusion-container {
   margin: auto;
   padding-bottom: 45px;
-  padding-top: 70px;
+  padding-top: 60px;
   text-align: center;
 }
 
@@ -445,8 +447,8 @@ img.button-biscuit {
 
 .map-container {
   align-content: center;
-
   margin: auto;
+  padding-top: 30px;
   text-align: center;
   width: 90%;
 }
