@@ -2,7 +2,7 @@
 $(function () {
   var hasBeenTrigged = false;
   $(window).scroll(function () {
-    if ($(this).scrollTop() >= 2100 && !hasBeenTrigged) {
+    if ($(this).scrollTop() >= 3600 && !hasBeenTrigged) {
       activate();
       hasBeenTrigged = true;
     }
@@ -159,7 +159,7 @@ function activate() {
       // console.log(key);
     });
 
-    alertcircle.setLatLng(icons["pinkCollar"]["coords"]); //Function for later
+    alertcircle.setLatLng(icons["pinkCollar"]["coords"]);
     var isInside = false;
     keys.forEach(function (key) {
       if (key !== "pinkCollar" && key !== "collarAlert") {

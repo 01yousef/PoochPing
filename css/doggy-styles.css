@@ -34,6 +34,7 @@ h3 {
 }
 
 h5 {
+  color: #766161;
   font-family: "Amatic SC", cursive;
   font-size: 2rem;
   font-weight: lighter;
@@ -153,8 +154,8 @@ p {
 
 .dog-ball {
   position: relative;
-  left: -90%;
-  bottom: 10%;
+  left: -4%;
+  top: 30%;
 }
 
 .product-container {
@@ -184,7 +185,7 @@ p {
 .code {
   margin: auto;
   padding: 40px;
-  width: 90%;
+  width: 95%;
 }
 
 .conclusion-container {
@@ -437,7 +438,7 @@ img.green-profile-pic {
 
 .blue {
   border-color: #00adb5;
-  text-align: left;
+  text-align: center;
 }
 
 .green {
@@ -491,7 +492,7 @@ img.green-profile-pic {
 .blue-collar {
   position: absolute;
   left: -25px;
-  bottom: 30px;
+  bottom: 20px;
   overflow: visible;
   width: 4rem;
 }
