@@ -102,19 +102,21 @@ p {
 
 .introduction-container {
   margin: auto;
-  padding-bottom: 10%;
+  padding-bottom: 25%;
   text-align: center;
   width: 95%;
 }
 
 .introduction {
   margin: auto;
+
   text-align: center;
 }
 
 .intro {
   color: #766161;
-  padding-bottom: 40px;
+  padding-top: 5%;
+  padding-bottom: 5%;
   text-shadow: 4px 4px 6px #968c83;
 }
 
@@ -123,7 +125,7 @@ p {
   padding-bottom: 45px;
   text-align: justify;
   margin-top: -200px;
-  padding-top: 190px;
+  padding-top: 170px;
 }
 
 /* TODO: correct container breakpoints + how img divs interact with text divs */
@@ -138,19 +140,20 @@ p {
   margin: auto;
   padding-top: 160px;
   padding-bottom: 50px;
-  /* text-align: right; */
+  text-align: justify;
 }
+
 .dog-house {
   vertical-align: middle;
 }
 
 .crate {
-  direction: rtl;
   text-align: justify;
 }
 
 .dog-ball {
   position: relative;
+  left: -90%;
   bottom: 10%;
 }
 
@@ -200,7 +203,7 @@ p {
 .intro-dog {
   align-items: center;
   max-width: 150px;
-  padding: 30px;
+  padding: 20px;
   vertical-align: middle;
 }
 
