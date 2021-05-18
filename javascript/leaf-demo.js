@@ -2,7 +2,7 @@
 $(function () {
   var hasBeenTrigged = false;
   $(window).scroll(function () {
-    if ($(this).scrollTop() >= 3600 && !hasBeenTrigged) {
+    if ($(this).scrollTop() >= 7400 && !hasBeenTrigged) {
       activate();
       hasBeenTrigged = true;
     }
