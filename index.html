@@ -5,6 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!--* //////////////////// Leaflet //////////////////// -->
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+      integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+      crossorigin=""
+    />
+
+    <script
+      src="https://unpkg.com/jquery@3.4.1/dist/jquery.min.js"
+      integrity="sha384-vk5WoKIaW/vJyUAd9n/wmopsmNhiy+L2Z+SBxGYnUkunIxVxAv/UtMOhba/xskxh"
+      crossorigin=""
+    ></script>
+    <script
+      src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+      integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+      crossorigin=""
+    ></script>
+
     <!--* //////////////////// bootstrap 5 //////////////////// -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
@@ -13,12 +33,21 @@
       crossorigin="anonymous"
     />
 
-    <!--* //////////////////// font //////////////////// -->
+    <!--* //////////////////// Alertify //////////////////// -->
+
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/alertify.min.css" />
+
+    <!--* //////////////////// font ////////////////////  -->
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Open+Sans&display=swap"
       rel="stylesheet"
     />
+
+    <!--* ////////////////////// prism ////////////////// -->
+    <link rel="stylesheet" type="text/css" href="css/prism.css" />
+    <script src="javascript/prism.js"></script>
 
     <!--* //////////////////// my styling //////////////////// -->
     <link rel="stylesheet" href="css/doggy-styles.css" />
@@ -57,26 +86,29 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
+              <a class="nav-link" href="#hello">Home</a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link" href="#problem">The Problem</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#solution">The Solution</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#about">About (Me)</a>
+              <a class="nav-link" href="#how">How It (Should) Work</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="project.html" target="_blank"
-                >How it works</a
-              >
+              <a class="nav-link" href="#demo">Demo</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#docs">Documentation</a>
             </li>
           </ul>
         </div>
       </nav>
     </header>
 
-    <!--* //////////// intorduction+ brief explaination //////////////////// -->
-    <section class="container introduction-container">
+    <section id="hello" class="container introduction-container">
       <div>
         <h1 class="intro">Hello There!</h1>
         <p>
@@ -142,13 +174,10 @@
       </div>
     </section>
 
-    <!--* //////////////// explain the solution + why it is best ////////////// -->
-    <!-- TODO: correct container breakpoints + how img divs interact with text divs -->
     <section id="solution" class="container-md solution-container">
       <div class="row g-5">
         <div class="col-lg-8">
           <h2>The Solution!</h2>
-          <!-- TODO: //////////////////// create written content //////////////////// -->
           <p>
             You're more likely to find someone who owns a smartphone than
             someone who has a dog, so to tackle our problem of miscommunication
@@ -190,8 +219,6 @@
       </div>
     </section>
 
-    <!--* short explaination onwhy this project is nowimportant to me + what I have learned these last 3 weeks  -->
-    <!-- TODO: correct container breakpoints + how img divs interact with text divs -->
     <section id="about" class="container-md about-container">
       <div class="row g-5">
         <div class="col-xl-4">
@@ -211,7 +238,6 @@
           </div>
         </div>
         <div class="col-lg-8">
-          <!-- TODO: //////////////////// create written content //////////////////// -->
           <h2>About (Me)</h2>
           <p>
             At this point, you might be wondering why I have chosen to help the
@@ -222,23 +248,23 @@
             came from thinking back to when I worked at the KSIA in Durban,
             South Africa as an explosive-detection dog handler with my partner,
             K9 Diesel, a massive male Dutch Shepherd who was trained for both
-            detection and apprehension.
+            detection and apprehension. He was a big boy with a bigger bite...
+            but also a sucker for attention. He would love to say hello to
+            everyone working at the airline check-in counters, but because of
+            his breed and size, most would panic and try to scare him off.
           </p>
         </div>
         <div class="row-col-xl crate">
           <p>
-            He was a big boy with a bigger bite... but also a sucker for
-            attention. He would love to say hello to everyone working at the
-            airline check-in counters, but because of his breed and size, most
-            would panic and try to scare him off. Labeled as aggressive based
-            solely on his appearance, no one took into consideration that as a
-            certified working dog he had been trained to do well around new
-            people. However, on our days off when I would take him to the beach,
-            it was the total opposite. Many people would walk their dogs
-            off-leash and let them run up to strangers and other dogs. This
-            terrified me as Diesel was not fond of other dogs, especially small
-            ones. I always had a leash on him, but a leash doesn't do much for
-            the other dog running free. <br /><br />
+            Labeled as aggressive based solely on his appearance, no one took
+            into consideration that as a certified working dog he had been
+            trained to do well around new people. However, on our days off when
+            I would take him to the beach, it was the total opposite. Many
+            people would walk their dogs off-leash and let them run up to
+            strangers and other dogs. This terrified me as Diesel was not fond
+            of other dogs, especially small ones. I always had a leash on him,
+            but a leash doesn't do much for the other dog running free.
+            <br /><br />
             After reading the briefing and looking for "someone" to help, Diesel
             and other dogs like him seemed to be the perfect fit. And my coding
             background was purely from working with GIS and ESRI products such
@@ -256,7 +282,506 @@
       </div>
     </section>
 
-    <!--* /////////////// basic footer + notification should 'link here' ////////////// -->
+    <section id="how" class="container-lg product-container">
+      <div class="row">
+        <div class="col-md-auto">
+          <!-- TODO: //////////////////// create written content //////////////////// -->
+          <h2>How It (Should) Work</h2>
+          <p>
+            PoochPing (my mom's name for it and I can't think of anything better yet)  
+            should be a native app, easily installed and used by anyone, anywhere, 
+            and will be very basic in terms of what it will do and why. <br /><br />
+            When a user chooses to take their four-legged friend for an outing 
+            and allowing access to their location, and I feel the app should only 
+            be granted access while activated by the user, PoochPing will use this 
+            similarly to how runner apps are used to track progress and accurately 
+            track their live location, and at the same time calculate the distance 
+            between them and other users. This is used in conjunction with the color 
+            collar system to determine if the user should receive a push notification 
+            to alert them of a potential trigger for their dog, whether the other 
+            user has a smaller breed which your dog should avoid, a nervous dog 
+            that you need to be considerate of, or if the dog is listed as 
+            "non-friendly" and all in the area need to practice a safe social distance.  
+          </p>
+        </div>
+        <div class="warning-div">
+          <img class="warning-icon" src="images/Alert.png" alt="Warning Sign" />
+        </div>
+        <div>
+          <p>
+            The color collar system is a tagging system to assign specific markers 
+            to the user so others can clearly see which group their dog belongs to 
+            and allow for quick decision-making that can help prevent incidents 
+            between both dogs and owners. I have tried to avoid words and colors 
+            which may negatively label certain traits and try to be as inclusive 
+            and respectful to each group. The term "non-friendly" and playful 
+            colors which are the general colors of dog toys have been used to try 
+            to accomplish a polite tagging system. <br /><br />
+            I do understand that these colors may not appeal to all and will 
+            develop a 'dark theme' as well as a colorblind-friendly icon system 
+            to ensure all can use it and avoid any miscommunication within the 
+            app itself.  
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="collar-card-colors">
+      <div class="row row-cols-1 row-cols-xxl-3 g-4 dog-card-holder">
+        <div class="col col-zen">
+          <div class="card card-collar user shadow-lg mb-3">
+            <div class="card-body">
+              <h5 class="card-title">User Collar</h5>
+              <p class="card-text">
+                The user's location in relation to others. <br>
+                This helps the user see how close other dogs 
+                are to theirs and what personalities to expect.
+              </p>
+              <img
+                class="user-collar"
+                src="images/user-icon.png"
+                alt="user Marker"
+                draggable="false"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="col col-zen">
+          <div class="card card-collar pink shadow-lg mb-3">
+            <div class="card-body">
+              <h5 class="card-title">Pink Collar</h5>
+              <p class="card-text">
+                "Non-friendly" dogs and ask for their space to be respected.
+                They might be a rescue dog with an unknown background or 
+                their personality just doesn't gel with others. 
+              </p>
+              <img
+                class="pink-collar"
+                src="images/pinkmarker-mapicon.png"
+                alt="Pink Marker"
+                draggable="false"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="col col-zen">
+          <div class="card card-collar purple shadow-lg mb-3">
+            <div class="card-body">
+              <h5 class="card-title">Purple Collar</h5>
+              <p class="card-text">
+                "No-small dogs" are friendly to most, 
+                they just don't know how to play nice 
+                ith smaller breeds or puppies.
+              </p>
+              <img
+                class="purple-collar"
+                src="images/purplemarker-mapicon.png"
+                alt="Purple Marker"
+                draggable="false"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="col col-zen">
+          <div class="card card-collar orange shadow-lg mb-3">
+            <div class="card-body">
+              <h5 class="card-title">Orange Collar</h5>
+              <p class="card-text">
+                "No-children" dogs do great with other dogs, 
+                they can just be too much or get nervous 
+                around young childre, or get possessive 
+                over any toys.
+              <p>
+              <img
+                class="orange-collar"
+                src="images/orangemarker-mapicon.png"
+                alt="Orange Marker"
+                draggable="false"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="col col-zen">
+          <div class="card card-collar blue shadow-lg mb-3">
+            <div class="card-body">
+              <h5 class="card-title">Blue Collar</h5>
+              <p class="card-text">
+                A bit nervous at first, and may come across as a bit 
+                awkward at first, just give them time to get to know you, 
+                but get edgy around large groups.
+              </p>
+              <img
+                class="blue-collar"
+                src="images/bluemarker-mapicon.png"
+                alt="Blue Marker"
+                draggable="false"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="col col-zen">
+          <div class="card card-collar green shadow-lg mb-3">
+            <div class="card-body">
+              <h5 class="card-title">Green Collar</h5>
+              <p class="card-text">
+                Easy-going and happy to say hello and play with anyone.
+                But these dogs may come across a bit strong at first, 
+                but understand they are just playful.
+              </p>
+              <img
+                class="green-collar"
+                src="images/greenmarker-mapicon.png"
+                alt="Green Marker"
+                draggable="false"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="profiles" class="container-lg status-container">
+      <div class="row-col-lg crate">
+        <h2>Pet(User) Profile</h2>
+        <p>
+          The user profile will be more for their canine counterpart 
+          than for them. The accounts may be linked to a person via an 
+          email address or cellphone when they signup for a PoochPing 
+          account, but the details within the user profile should be 
+          compiled of the dog's details. <br /><br />
+          The dog's name, breed, age, and color collar select as well 
+          as a short bio to help others get a better idea of their 
+          personality and a picture so when close enough others can 
+          see who the profile is assigned to. This helps to avoid 
+          others judging your dog on their looks alone.
+        </p>
+      </div>
+
+      <div class="collars-container">
+        <div
+          id="carouselExampleInterval"
+          class="carousel carousel-dark slide"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="10000">
+              <div class="card user shadow-lg mb-3 collar-card">
+                <div class="card-body">
+                  <h5 class="card-title">User Profile</h5>
+                  <p class="card-text">This is a short card.</p>
+                  <img
+                    class="user-profile-pic"
+                    src="images/user-icon.png"
+                    alt="User Icon" 
+                  />
+                  <img
+                    class="paw-rest"
+                    src="images/paw-marker-mapicon.png"
+                    alt="no petting" draggable="false"
+                  />
+                  <img
+                    class="user-dog"
+                    src="images/GoodBoy.png"
+                    alt="user-dog" draggable="false"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="10000">
+              <div class="card pink shadow-lg mb-3 collar-card">
+                <div class="card-body">
+                  <h5 class="card-title">Pink Profile</h5>
+                  <p class="card-text">This is a short card.</p>
+                  <img
+                    class="pink-profile-pic"
+                    src="images/pink-collar-profile.png"
+                    alt="Pink collar husky" draggable="false"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="card purple shadow-lg mb-3 collar-card">
+                <div class="card-body">
+                  <h5 class="card-title">Purple Profile</h5>
+                  <p class="card-text">This is a short card.</p>
+                  <img
+                    class="purple-profile-pic"
+                    src="images/purple-collar-profile.png"
+                    alt="Purple collar Bulldog" draggable="false"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="card orange shadow-lg mb-3 collar-card">
+                <div class="card-body">
+                  <h5 class="card-title">Orange Profile</h5>
+                  <p class="card-text">This is a short card.</p>
+                  <img
+                    class="orange-profile-pic"
+                    src="images/orange-collar-profile.png"
+                    alt="Orange collar Dachshund" draggable="false"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="card blue shadow-lg mb-3 collar-card">
+                <div class="card-body">
+                  <h5 class="card-title">Blue Profile</h5>
+                  <p class="card-text">This is a short card.</p>
+                  <img
+                    class="blue-profile-pic"
+                    src="images/blue-collar-profile.png"
+                    alt="Blue collar Dobermann" draggable="false"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="card green shadow-lg mb-3 collar-card">
+                <div class="card-body">
+                  <h5 class="card-title">Green Profile</h5>
+                  <p class="card-text">This is a short card.</p>
+                  <img
+                    class="green-profile-pic"
+                    src="images/green-collar-profile.png"
+                    alt="Poodle Thing... I have no idea." draggable="false"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleInterval"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleInterval"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section id="demo" class="container map-container">
+      <div class="row g-5 map-container">
+        <div class="col-lg-12">
+          <h2>Demo</h2>
+          <p>
+            Leaflet is an open-source JavaScript library mainly used for 
+            mobile-friendly interactive maps and is ideal for my project 
+            and Stamen Design LLC who work with data visualization and 
+            cartography have created a beautiful watercolor base map with 
+            OpenStreetMap which is community-owned and aims to give access 
+            to free, editable maps of the world which are up-to-date. <br /><br />
+            I chose Leaflet simply due to its capabilities and how 
+            easy it is to customize map features and OpenStreetMap 
+            tiles are reliable and beautiful base maps adding 
+            accuracy and aesthetic. 
+            </p>
+            <div class="code">
+              <pre><code class="language-js"> 
+                var map = L.map("map", {
+                  center: [52.493891, 13.446395],
+                  minZoom: 14,
+                  zoom: 16,
+                });
+              
+                L.tileLayer("	http://c.tile.stamen.com/watercolor/{z}/{x}/{y}.jpg", {
+                  attribution:
+                    '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+                }).addTo(map);
+              </pre></code>
+            </div>
+            <p>
+            The demo illustrates how I hope the app will function. 
+            The user icon seen as a dog paw is a draggable marker 
+            for you to interact with the map and its starting location 
+            is 52.493891, 13.446395, but you may recognize the location 
+            of the address as  Lohmühlenstraße 65, 12435 Berlin, Germany. <br /><br />
+            The other markers have been given set starting points and 
+            move around the map to newly assigned random locations to 
+            emulate live locations of users updating.
+          </p>
+          <div class="code">
+            <pre><code class="language-js"> 
+              keys.forEach(function (key) {
+                if (key !== "collarAlert" && key !== "user") {
+                  icons[key]["coords"][0] =
+                    icons[key]["coords"][0] + (Math.random() * 0.5 - 0.25) * 0.0009;
+                  icons[key]["coords"][1] =
+                    icons[key]["coords"][1] + (Math.random() * 0.5 - 0.25) * 0.0009;
+                  icons[key]["marker"].setLatLng(icons[key]["coords"]).update();
+                }
+              });
+            </pre></code>
+          </div>
+          <p>
+            The pink marker is to mimic a user with a pink collar 
+            tag and has been given a set radius. Should any marker enter 
+            that radius the radius will change color and a notification 
+            will appear to alert the user of another dog nearby.            
+          </p>
+
+          <div class="code">
+            <pre><code class="language-js"> 
+            alertcircle.setLatLng(icons["pinkCollar"]["coords"]);
+              var isInside = false;
+              keys.forEach(function (key) {
+                if (key !== "pinkCollar" && key !== "collarAlert") {
+                  var d = map.distance(
+                    icons[key]["marker"].getLatLng(),
+                    alertcircle.getLatLng()
+                  );
+                  if (d < alertcircle.getRadius()) {
+                    isInside = true;
+                  }
+                  alertcircle.setStyle({
+                    fillColor: isInside ? "#ce1212" : "",
+                  });
+
+                  if (isInside && canBark) {
+                    alertify.warning("Careful! Another dog nearby.");
+                    play();
+
+                    setTimeout(() => {
+                      canBark = true;
+                    }, 5000);
+                    canBark = false;
+                  }
+                }
+            });
+            </pre></code>
+          </div>
+          <p>
+            You can either wait for one of the other markers to enter 
+            the radius or drag the user icon closer to the pink marker 
+            until the alert is triggered
+          </p>
+        </div>
+
+        
+        <div class="give-me-space"></div>
+        <div  class="container demo">
+          <div class="row">
+            <div class="col-lg">
+              <div>
+                <img
+                  class="map-frame"
+                  src="images/map-phone-frame.png"
+                  alt="Smartphone Frame"
+                />
+              </div>
+              <div id="map" class="mapdiv shadow-lg"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-12">
+          <div>
+            <div class="map-credit">
+              Map tiles by <a href="http://stamen.com">Stamen Design</a>, under
+              <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a
+              >. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>,
+              under
+              <a href="http://creativecommons.org/licenses/by-sa/3.0"
+                >CC BY SA</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="docs" class="container conclusion-container">
+      <div class="container-fluid">
+        <div class="row-col-lg">
+          <!-- TODO: //////////////////// create written content //////////////////// -->
+          <h2>
+            Add some kind of link to github for code/explain what I have learned
+            and still need to.
+          </h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+            ea commodo consequat. Duis aute irure dolor in reprehenderit in
+            voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+            officia deserunt mollit anim id est laborum.
+          </p>
+        <div class="code">
+          <pre><code class="language-js"> 
+            Livelocation
+            function onLocationFound(e) {
+              var radius = e.accuracy;
+            
+              L.marker(e.latlng).addTo(map)
+                  .bindPopup("You are within " + radius + " meters from this point").openPopup();
+            
+              L.circle(e.latlng, radius).addTo(map);
+            }
+            
+            map.on('locationfound', onLocationFound);
+            
+            locationnotfound
+            function onLocationError(e) {
+              alert(e.message);
+            }
+            
+            map.on('locationerror', onLocationError);  
+          </pre></code>
+        </div>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+            ea commodo consequat. Duis aute irure dolor in reprehenderit in
+            voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+            officia deserunt mollit anim id est laborum.
+          </p>
+          <button onclick="" class="button" type="button">
+            <img
+              class="button-biscuit"
+              src="images/button-paw.png"
+              alt="Button Biscuit"
+              draggable="false"
+            />
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!--* ////////// basic footer + notification should 'link here' /////////// -->
 
     <footer class="footer">
       <div>
@@ -272,11 +797,23 @@
 
     <!--* //////////////////// scripts //////////////////// -->
 
+    <!--* //////////////////// Leaflet //////////////////// -->
+    <script type="text/javascript" src="javascript/markers.js"></script>
+    <script type="text/javascript" src="javascript/leaf-demo.js"></script>
+
     <!--* //////////////////// bootstrap 5 //////////////////// -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
       crossorigin="anonymous"
     ></script>
+
+    <!--* /////////////////// Alertify ///////////////////////// -->
+
+    <script type="text/javascript" src="javascript/alertify.min.js"></script>
+
+
+    <!--* /////////////////// JQuery ///////////////////////// -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   </body>
 </html>

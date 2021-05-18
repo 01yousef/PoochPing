@@ -106,18 +106,19 @@ p {
   padding-bottom: 25%;
   text-align: center;
   width: 95%;
+  margin-top: -180px;
+  padding-top: 150px;
 }
 
 .introduction {
   margin: auto;
-
   text-align: center;
 }
 
 .intro {
   color: #766161;
-  padding-top: 5%;
-  padding-bottom: 5%;
+  padding-top: 3%;
+  padding-bottom: 3%;
   text-shadow: 4px 4px 6px #968c83;
 }
 
@@ -125,8 +126,8 @@ p {
   margin: auto;
   padding-bottom: 45px;
   text-align: justify;
-  margin-top: -200px;
-  padding-top: 170px;
+  margin-top: -180px;
+  padding-top: 150px;
 }
 
 /* TODO: correct container breakpoints + how img divs interact with text divs */
@@ -161,9 +162,9 @@ p {
 .product-container {
   margin: auto;
   padding-bottom: 25px;
-  padding-top: 150px;
+  padding-top: 170px;
   text-align: justify;
-  margin-top: -150px;
+  margin-top: -120px;
 }
 
 .status-container {
