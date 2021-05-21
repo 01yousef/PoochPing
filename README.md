@@ -27,9 +27,6 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-
-Here's a blank template to get started:
-**To avoid retyping too much info. Do a search and replace with your text editor for the following:**
 `berlin-experiment`, `Code-Challenge-Dog-App`, `staceykenny@outlook.com`, `PoochPing`, `Code Application Challange`
 
 
@@ -128,9 +125,3 @@ Project Link: [https://github.com/berlin-experiment/Code-Challenge-Dog-App/blob/
 * [OpenStreetMap](https://www.openstreetmap.org/#map=6/-28.662/24.664)
 * [Bootstrap 5](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
 * [Prism](https://prismjs.com/)
-
-
-
-
-
-
