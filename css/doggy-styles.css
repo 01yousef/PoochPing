@@ -234,13 +234,14 @@ p {
   padding-top: 56px;
   padding-bottom: 50px;
   overflow: visible;
-  width: 90%;
+  width: 65rem;
+  min-width: 60rem;
 }
 
 .code {
   text-shadow: none;
   margin: auto;
-  min-width: 200px;
+  min-width: 400px;
   padding: 40px;
   width: 95%;
 }
