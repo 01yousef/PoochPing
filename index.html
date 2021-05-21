@@ -110,7 +110,8 @@
 
     <section id="hello" class="container introduction-container">
       <div>
-        <h1 class="intro">Hello There!</h1>
+        <h1 class="intro">Hello Pet Parents!</h1>
+        <!-- TODO: create content to welcome potential users -->
         <p>
           Thank you for your interest in my application. <br />
           I was excited to receive the challenge and realized that it was a good
@@ -133,10 +134,15 @@
           I intend to complete it even if my application is unsuccessful.
         </p>
       </div>
+      <div class="line">
+        <hr>
+      </div>
     </section>
+
 
     <section id="problem" class="container-md problem-container">
       <div class="row-col-lg">
+        <!-- TODO: create content to welcome potential users and situations they can relate to -->
         <h2>The Problem</h2>
         <p>
           Ever take your canine companion for a nice relaxing day at the beach,
@@ -172,9 +178,13 @@
           from across the park?
         </p>
       </div>
+      <div class="line">
+        <hr>
+      </div>
     </section>
 
     <section id="solution" class="container-md solution-container">
+      <!-- TODO: explain the product brieflyand how it a solution for potential users -->
       <div class="row g-5">
         <div class="col-lg-8">
           <h2>The Solution!</h2>
@@ -217,9 +227,13 @@
           </div>
         </div>
       </div>
+      <div class="line">
+        <hr>
+      </div>
     </section>
 
     <section id="about" class="container-md about-container">
+      <!-- TODO: make shorter and more company/product based and remove from mainpage or leave at the bottom of the page -->
       <div class="row g-5">
         <div class="col-xl-4">
           <div class="dog-house">
@@ -280,17 +294,21 @@
           </p>
         </div>
       </div>
+      <div class="line">
+        <hr>
+      </div>
     </section>
 
     <section id="how" class="container-lg product-container">
+      <!-- TODO: create content to explain the functionality to potential users -->
       <div class="row">
         <div class="col-md-auto">
           <h2>How It (Should) Work</h2>
           <p>
             PoochPing (my mom's name for it and I can't think of anything better yet)  
-            should be a native app, easily installed and used by anyone, anywhere, 
+            will be a native app, easily installed and used by anyone, anywhere, 
             and will be very basic in terms of what it will do and why. <br /><br />
-            When a user chooses to take their four-legged friend for an outing 
+            When users choose to take their four-legged friend for an outing 
             and allowing access to their location, and I feel the app should only 
             be granted access while activated by the user, PoochPing will use this 
             similarly to how runner apps are used to track progress and accurately 
@@ -323,8 +341,12 @@
           </p>
         </div>
       </div>
+      <div class="line">
+        <hr>
+      </div>
     </section>
 
+    <!-- TODO: create content to explain the collar tags and profiles to potential users, setup and day-to-day use -->
     <section class="collar-card-colors">
       <div class="row row-cols-1 row-cols-xxl-3 g-4 dog-card-holder">
         <div class="col col-zen">
@@ -443,8 +465,8 @@
 
     <section id="profiles" class="container-lg status-container">
       <div class="row-col-lg crate">
-        <h2>Pet(User) Profile</h2>
-        <p>
+        <h2 class="light-font">Pet (User) Profile</h2>
+        <p class="light-font">
           The user profile will be more for their canine counterpart 
           than for them. The accounts may be linked to a person via an 
           email address or cellphone when they signup for a PoochPing 
@@ -622,11 +644,12 @@
       </div>
     </section>
 
-    <section id="demo" class="container map-container">
+    <section id="demo" class="container map-container light-font">
+      <!-- TODO: remove code and move demoup in page, create content to explain the functionality to potential users -->
       <div class="row g-5 map-container">
         <div class="col-lg-12">
-          <h2>Demo</h2>
-          <p>
+          <h2 class="light-font">Demo</h2>
+          <p class="light-font">
             Leaflet is an open-source JavaScript library mainly used for 
             mobile-friendly interactive maps and is ideal for my project 
             and Stamen Design LLC who work with data visualization and 
@@ -652,7 +675,7 @@
                 }).addTo(map);
               </pre></code>
             </div>
-            <p>
+            <p class="light-font">
             The demo illustrates how I hope the app will function. 
             The user icon seen as a dog paw is a draggable marker 
             for you to interact with the map and its starting location 
@@ -675,7 +698,7 @@
               });
             </pre></code>
           </div>
-          <p>
+          <p class="light-font">
             The pink marker is to mimic a user with a pink collar 
             tag and has been given a set radius. Should any marker enter 
             that radius the radius will change color and a notification 
@@ -712,7 +735,7 @@
             });
             </pre></code>
           </div>
-          <p>
+          <p class="light-font">
             You can either wait for one of the other markers to enter 
             the radius or drag the user icon closer to the pink marker 
             until the alert is triggered
@@ -731,7 +754,7 @@
                   alt="Smartphone Frame"
                 />
               </div>
-              <div id="map" class="mapdiv shadow-lg"></div>
+              <div id="map" class="mapdiv shadow-lg code"></div>
             </div>
           </div>
         </div>
@@ -755,11 +778,11 @@
     <section id="docs" class="container conclusion-container">
       <div class="container-fluid">
         <div class="row-col-lg">
-          <h2>
+          <h2 class="light-font">
             Github
-          </h2>
-          <h3>(And what I have learned)</h3>
-          <p>
+          </h2 >
+          <h3 class="light-font">(And what I have learned)</h3>
+          <p class="light-font">
             You will be able to access all my code and the Read Me on GitHub 
             as well as view the commits made as I worked on this site. 
             I tried to program the demo in a way that the code still hopefully 
@@ -786,16 +809,59 @@
 
     <!--* ////////// basic footer + notification should 'link here' /////////// -->
 
-    <footer class="footer">
-      <div>
-        <h3>For K9 Diesel</h3>
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-8">
+            <h6 class="light-font">About</h6>
+            <p class="text-justify light-font">
+              The purpose of the app is prevention. Being able to clearly see that
+              a dog is "non-friendly" or that they don't play well with smaller
+              children or dogs, or having something able to check your blindspot
+              and to create safer enviroments for all and allow all dogs and their 
+              pet parents equal opportunity and respect outdoors.
+            </p>
+          </div>
+
+
+          <div class="col-xs-4 col-md-3">
+            <h6 class="light-font">Quick Links</h6>
+            <ul class="footer-links">
+              <li><a href="" class="disabled">PoochPing</a></li>
+              <li><a href=""">Contact Me</a></li>
+              <li>
+                <a href="" class="disabled"
+                  >Privacy Policy</a
+                >
+            </ul>
+          </div>
+        </div>
+        <hr />
       </div>
-      <img
-        class="footer-img"
-        src="images/Footer-dog.png"
-        alt="Happy Doggo"
-        draggable="false"
-      />
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-sm-6 col-xs-12">
+            <p class="copyright-text">
+              Copyright &copy; 2021 All Rights Reserved by
+              <a href="#">PoochPing</a> at some point
+            </p>
+          </div>
+
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <ul class="social-icons">
+              <li>
+                <a class="facebook" href="#"><img src="" alt="Facebook"></a>
+              </li>
+              <li>
+                <a class="email" href="#"><img src="" alt="Email"></a>
+              </li>
+              <li>
+                <a class="phone" href="#"><img src="" alt="WhatsApp"></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </footer>
 
     <!--* //////////////////// scripts //////////////////// -->
