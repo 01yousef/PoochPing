@@ -66,7 +66,7 @@
             alt=""
             width="36"
             height="30"
-            class="d-inline-block align-text-center"
+            class="d-inline-block align-text-center brand"
           />
           Pooch Ping
         </a>
@@ -183,10 +183,10 @@
       </div>
     </section>
 
-    <section id="solution" class="container-md solution-container">
+    <section id="solution" class="container solution-container">
       <!-- TODO: explain the product brieflyand how it a solution for potential users -->
       <div class="row g-5">
-        <div class="col-lg-8">
+        <div class="col-xl-8 col-lg-12">
           <h2>The Solution!</h2>
           <p>
             You're more likely to find someone who owns a smartphone than
@@ -206,7 +206,7 @@
             it work section.
           </p>
         </div>
-        <div class="col-lg-4">
+        <div class="col-xl-4 col-lg-12">
           <div class="img-stack">
             <div class="img-stack-map">
               <img
@@ -235,7 +235,7 @@
     <section id="about" class="container-md about-container">
       <!-- TODO: make shorter and more company/product based and remove from mainpage or leave at the bottom of the page -->
       <div class="row g-5">
-        <div class="col-xl-4">
+        <div class="col-xl-4 col-lg-12">
           <div class="dog-house">
             <div>
               <img
@@ -251,7 +251,7 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-8">
+        <div class="col-xl-8 col-md-12">
           <h2>About (Me)</h2>
           <p>
             At this point, you might be wondering why I have chosen to help the
@@ -754,7 +754,7 @@
                   alt="Smartphone Frame"
                 />
               </div>
-              <div id="map" class="mapdiv shadow-lg code"></div>
+              <div id="map" class="mapdiv shadow-lg"></div>
             </div>
           </div>
         </div>
@@ -845,26 +845,38 @@
               Copyright &copy; 2021 All Rights Reserved by
               <a href="#">PoochPing</a> at some point
             </p>
+            <div>
+              <p class="copyright-text">Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> 
+                from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+              </p>
+            </div>
           </div>
 
           <div class="col-md-4 col-sm-6 col-xs-12">
             <ul class="social-icons">
-              <li>
-                <a class="facebook" href="#"><img src="" alt="Facebook"></a>
+              <li class="sml-icons">
+                <a class="facebook" href=""><img class="sml-icons" src="images/chat.png" alt="Facebook"></a>
               </li>
-              <li>
-                <a class="email" href="#"><img src="" alt="Email"></a>
+              <li class="sml-icons">
+                <a class="email" href="mailto:"><img class="sml-icons" src="images/mail.png" alt="Email"></a>
               </li>
-              <li>
-                <a class="phone" href="#"><img src="" alt="WhatsApp"></a>
+              <li class="sml-icons">
+                <a class="phone" href="tel:"><img class="sml-icons" src="images/call.png" alt="WhatsApp"></a>
+                
               </li>
             </ul>
           </div>
         </div>
       </div>
+      <img
+      class="footer-img"
+      src="images/footer-dog.png"
+      alt="Happy Doggo"
+      draggable="false"
+    />
     </footer>
 
-    <!--* //////////////////// scripts //////////////////// -->
+    <!--! //////////////////// scripts //////////////////// -->
 
     <!--* //////////////////// Leaflet //////////////////// -->
     <script type="text/javascript" src="javascript/markers.js"></script>
