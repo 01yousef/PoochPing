@@ -26,47 +26,32 @@ hr {
   background-image: -o-linear-gradient(left, #b6ac9a, #242529, #b6ac9a);
 }
 
-a {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #41444b;
   font-family: "Amatic SC", cursive;
-  font-size: 1.5rem;
-  font-weight: light;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 h1 {
-  color: #41444b;
-  font-family: "Amatic SC", cursive;
   font-size: 4.5rem;
   font-weight: bold;
 }
 
 h2 {
-  color: #41444b;
-  font-family: "Amatic SC", cursive;
   font-size: 2.5rem;
   font-weight: bolder;
-  margin-top: 0;
-  margin-bottom: 0;
 }
 
-h3 {
-  color: #41444b;
-  font-family: "Amatic SC", cursive;
-  font-size: 2rem;
-  /* font-weight: lighter; */
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-h5 {
-  color: #41444b;
-  font-family: "Amatic SC", cursive;
-  font-size: 2rem;
-  font-weight: lighter;
-}
-
+h3,
+h4,
+h5,
 h6 {
-  color: #41444b;
-  font-family: "Amatic SC", cursive;
   font-size: 2rem;
   font-weight: lighter;
 }
@@ -148,9 +133,9 @@ p {
 }
 
 .footer-img {
-  max-height: 9rem;
+  max-height: 4rem;
   position: fixed;
-  bottom: -4px;
+  bottom: -5px;
   right: 10px;
 }
 
@@ -162,7 +147,7 @@ p {
   text-align: center;
   width: 95%;
   margin-top: -180px;
-  padding-top: 150px;
+  padding-top: 140px;
 }
 
 .introduction {
@@ -263,9 +248,43 @@ p {
 
 /** images */
 
+.k9-diesel {
+  color: #00adb5;
+  font-family: "Amatic SC", cursive;
+  font-size: 1.5rem;
+  font-weight: bolder;
+  margin: auto;
+  position: relative;
+  text-align: center;
+}
+
+.diesel {
+  box-shadow: 0px 0px 5px rgb(48, 48, 48);
+  width: 20rem;
+}
+
+.paw-print-1 {
+  position: absolute;
+  right: -20%;
+  top: -10%;
+  opacity: 60%;
+  transform: rotate(20deg);
+  width: 10rem;
+}
+
+.paw-print-2 {
+  position: absolute;
+  left: -20%;
+  top: 70%;
+  opacity: 60%;
+  transform: rotate(-20deg);
+  width: 10rem;
+}
+
 .intro-dog {
   align-items: center;
-  max-width: 150px;
+  margin: auto;
+  max-width: 300px;
   padding: 20px;
   vertical-align: middle;
 }
@@ -340,7 +359,7 @@ img.dog-toy {
   animation: bounce alternate 4s infinite;
   animation-fill-mode: both;
   position: relative;
-  left: 80%;
+  left: 90px;
   max-width: 10%;
   min-width: 5%;
 }
@@ -383,8 +402,7 @@ img.warning-icon {
 
 .sml-icons {
   float: left;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding: 5px 10px 0 10px;
   width: 3.5rem;
 }
 
@@ -640,6 +658,13 @@ img.map-frame {
 
 /** Links **/
 
+a {
+  font-family: "Amatic SC", cursive;
+  font-size: 1.5rem;
+  font-weight: light;
+  text-decoration: none;
+}
+
 a:link {
   color: #fc8621;
 }
@@ -659,8 +684,8 @@ a:visited {
 /*** Alerts ***/
 
 .alertify-notifier.ajs-bottom {
-  right: 4.5rem;
-  bottom: 5.5rem;
+  right: 3rem;
+  bottom: 3rem;
 }
 
 .alertify-notifier .ajs-message.ajs-warning {
