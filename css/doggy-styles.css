@@ -1,3 +1,5 @@
+/* TODO: Delete classes + ID's which are no londer in use */
+
 /** general styling */
 
 body {
@@ -117,7 +119,7 @@ p {
 
 /** footer  */
 
-.footer {
+/* .footer {
   background-color: #41444b;
   color: #d6d2c4;
   box-shadow: 0px -2px 5px grey;
@@ -130,7 +132,7 @@ p {
   text-align: center;
   width: 100%;
   z-index: 9999;
-}
+} */
 
 .footer-img {
   max-height: 4rem;
