@@ -99,7 +99,7 @@ p {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 9999;
+  z-index: 999;
 }
 .navbar {
   padding-left: 10%;
@@ -118,21 +118,6 @@ p {
 }
 
 /** footer  */
-
-/* .footer {
-  background-color: #41444b;
-  color: #d6d2c4;
-  box-shadow: 0px -2px 5px grey;
-  font-family: "Amatic SC", cursive;
-  left: 0;
-  height: 2.5rem;
-  margin: auto;
-  position: fixed;
-  bottom: 0;
-  text-align: center;
-  width: 100%;
-  z-index: 9999;
-} */
 
 .footer-img {
   max-height: 4rem;
@@ -713,4 +698,14 @@ a:visited {
 a.disabled {
   pointer-events: none;
   cursor: default;
+}
+
+body {
+  -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  scrollbar-width: none; /* for Firefox */
+  overflow-y: scroll;
+}
+
+body::-webkit-scrollbar {
+  display: none; /* for Chrome, Safari, and Opera */
 }
