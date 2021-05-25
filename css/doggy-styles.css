@@ -600,8 +600,13 @@ img.button-biscuit {
   max-width: 4rem;
 }
 
+.demo-map {
+  margin: auto;
+  position: absolute;
+  left: 50%;
+}
+
 .map-container {
-  align-content: center;
   margin: auto;
   padding-top: 30px;
   text-align: justify;
@@ -609,6 +614,9 @@ img.button-biscuit {
 }
 
 .demo {
+  align-content: center;
+  align-items: center;
+  justify-content: center;
   height: 22rem;
   position: relative;
   margin: auto;
