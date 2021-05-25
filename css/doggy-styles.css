@@ -608,6 +608,26 @@ img.button-biscuit {
   width: 90%;
 }
 
+@media (min-width: 1200px) {
+  .map-container {
+    width: 750px !important;
+  }
+}
+@media (min-width: 992px) {
+  .map-container {
+    width: 750px !important;
+  }
+}
+@media (min-width: 768px) {
+  .map-container {
+    width: 750px !important;
+  }
+}
+
+.map-container {
+  width: 750px !important;
+}
+
 .demo {
   height: 22rem;
   position: relative;
