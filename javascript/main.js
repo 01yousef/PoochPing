@@ -6,6 +6,17 @@ $(document).ready(function () {
   }, 3000);
 });
 
+var map = L.map("map", {
+  center: [52.493891, 13.446395],
+  minZoom: 14,
+  zoom: 16,
+});
+
+L.tileLayer("	http://c.tile.stamen.com/watercolor/{z}/{x}/{y}.jpg", {
+  attribution:
+    '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+}).addTo(map);
+
 //Main Js - Map Demo
 $(function () {
   var hasBeenTrigged = false;
@@ -20,17 +31,6 @@ $(function () {
 //* ///////////// basemap /////////////
 
 function activate() {
-  var map = L.map("map", {
-    center: [52.493891, 13.446395],
-    minZoom: 14,
-    zoom: 16,
-  });
-
-  L.tileLayer("	http://c.tile.stamen.com/watercolor/{z}/{x}/{y}.jpg", {
-    attribution:
-      '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-  }).addTo(map);
-
   //* The Collars
 
   let icons = {
