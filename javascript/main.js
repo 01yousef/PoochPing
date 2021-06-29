@@ -12,7 +12,7 @@ var map = L.map("map", {
   zoom: 16,
 });
 
-L.tileLayer("	http://c.tile.stamen.com/watercolor/{z}/{x}/{y}.jpg", {
+L.tileLayer("http://c.tile.stamen.com/watercolor/{z}/{x}/{y}.jpg", {
   attribution:
     '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
 }).addTo(map);
